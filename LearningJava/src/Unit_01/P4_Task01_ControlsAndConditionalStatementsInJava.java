@@ -80,7 +80,7 @@ class Statements
 				   if(i == 6)
 					   break;
 				   System.out.println(i);
-			   }
+			   } 
 			   
 			   //continue
 			   System.out.println("\ncontinue Statement : ");

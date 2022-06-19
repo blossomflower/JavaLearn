@@ -30,7 +30,7 @@ public class P3_Task02_OperatorsInJava {
 	obj.ArithmeticOperator();
 	obj.ShiftOperator();
 	obj.RelationalOperator();
-	obj.BitwiseOperator();
+	obj.BitwiseAndLogicalOperator();
 	obj.TernaryOperator();
 	obj.AssignmentOperator();
 
@@ -58,7 +58,7 @@ class OperatorsInJava {
 		//NOT operator ! : used to reverse the value of operand
 		
 		System.out.println(!b); // true
-		System.out.println("n");
+		
 	}
 	void ArithmeticOperator() {
 		System.out.println("Inside ArithmeticOperator");
@@ -67,13 +67,13 @@ class OperatorsInJava {
 		int b = 5;
 		System.out.println(a+b); //15
 		System.out.println(a-b); //5
-		System.out.println(a*b); //20
-		System.out.println(a/b); //50
+		System.out.println(a*b); //50
+		System.out.println(a/b); //2
 		System.out.println(a%b); //0
 		
 		//What is the output of this expression?
-		System.out.println((10*10)/5+3-((1*4)/2));
-		System.out.println("n");
+		System.out.println((10*10)/5+3-((1*4)/2)); //21
+	
 	}
 	
 	void ShiftOperator() {
@@ -83,17 +83,17 @@ class OperatorsInJava {
 	 01010101<<1
 	 
 	 */
-	
+	//Signed left shift
 	System.out.println(10 << 2); // 10*2^2=10*4=40
 	System.out.println(10 << 3); // 10*2^3=10*8=80
 	System.out.println(20 << 2); // 20*2^2=20*4=80
 	System.out.println(15 << 4); // 15*2^4=15*16=240
 	
+	//signed right shift
 	System.out.println(10 >> 2); // 10/2^2=10/4=2
 	System.out.println(20 >> 2); // 20/2^2=20/4=5 
 	System.out.println(20 >> 3); // 20/2^3=20/8=2
 	
-	System.out.println("/n");
 	}
 	
 	//result is true or false 
@@ -101,23 +101,28 @@ class OperatorsInJava {
 		
 		System.out.println("Inside relational operator");
 		int a=10,b=20;
-		System.out.println(a==b);
-		System.out.println(a!=b);
-		System.out.println(a>b);
-		System.out.println(a<b);
+		System.out.println(a==b);//false
+		System.out.println(a!=b);//true
+		System.out.println(a>b);//false
+		System.out.println(a<b);//true
 		System.out.println(a>=b);
 		System.out.println(a<=b);
-		System.out.println("\n");
+	
 	}
 	
-	void BitwiseOperator() {
+	void BitwiseAndLogicalOperator() {
 		System.out.println("Inside bitwise and logical operator");
 		int a=10,b=5,c=20;
 		
 		//logical && and bitwise &
+		
 		System.out.println(a<b && a++ < c);
 		System.out.println(a);
 		
+		// & returns bit by bit AND of input ---- 10&5  
+		//    1010
+		//	  0111     if both bits are 1 then o/p is 1 else 0
+		//   =0010 -> 2
 		System.out.println(a<b & a++ < c);
 		System.out.println(a);
 		
@@ -131,34 +136,34 @@ class OperatorsInJava {
 		System.out.println(a);
 		
 		/*
-		 * Exclusive | and Inclusive ^ OR
+		 * Exclusive ^ and Inclusive | OR
 		 * Incase of or: 0|1=1 ,1|0=1 , 1|1=1,0|0=0
 		 * */
-		System.out.println("bitwise inclusive OR :"+(12|12));
-		System.out.println("bitwise exclusive OR"+(12^12));
+		System.out.println("bitwise inclusive OR :"+(12|12)+"bitwise exclusive OR :"+(12^12));
+
 		
-		System.out.println("\n");
+	
 	}
 	
 	
 	void TernaryOperator() {
-		System.out.println("inside ternary operator");
+	
 		
 		int a=2,b=5;
 		int min = (a<b)?a:b;
-		System.out.println(min);
-		System.out.println("\n");
+	
+		System.out.print("inside ternary operator"+ min);
 		
 	}
 	
 	void AssignmentOperator() {
-		System.out.println("inside assignment operator");
+		System.out.print("inside assignment operator:");
 		
 		int a=10,b=20;
 		a+=4; //a=a+4  (a=10+4)
 		b-=4; //b=b-4  (b=20-4)
-		System.out.println(a);
-		System.out.println(b);
+		System.out.print(a+"and");
+		System.out.print(b);
 	
      }
 	

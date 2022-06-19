@@ -57,7 +57,7 @@ class Species implements Animal, Human{
 	}
 	
 	@Override
-	public void run() {
+	public void run() { 
 		
 		System.out.println("We are Inside run method");
 		
